@@ -1,6 +1,15 @@
 # ShellHelper
 It's an utility that can help you to execute OS script or script file like bat file on windows or shell file on linux.
 
+**Nuget**
+```sh
+# Package Manager
+Install-Package ColinChang.ShellHelper
+
+# .NET CLI
+dotnet add package ColinChang.ShellHelper
+```
+
 > Tips
 
 * You can not control the real time or orders when the scripts will be executed eventually because it will new processes to run different script or script files.
@@ -17,4 +26,4 @@ Plus,different scripts can not share a context.By the way,you can't know what ti
 
 * Be sure the property of script files is executable and the right permission are granted.  
 
-About how to use this,please check the Sample project.
+About how to use this,please check the [Sample project](https://github.com/colin-chang/ShellHelper/tree/master/ColinChang.ShellHelper.Sample).
