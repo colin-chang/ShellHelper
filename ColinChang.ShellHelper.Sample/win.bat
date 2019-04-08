@@ -1,3 +1,7 @@
 @echo off
 
-dir $1
+:: test errors
+dir
+cd 123
+::pwd
+cd

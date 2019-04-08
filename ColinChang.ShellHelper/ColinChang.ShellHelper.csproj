@@ -3,13 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Colin Chang</Authors>
-    <Description>It's an utility that can help you to execute OS script or script file like bat file on windows or shell file on linux.</Description>
+    <Description>It's an utility that can help you to execute command or command file like bat file on windows or shell file on linux.</Description>
     <Copyright>https://colin-chang.site/</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/colin-chang/ShellHelper</PackageProjectUrl>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/colin-chang/ShellHelper</RepositoryUrl>
     <PackageTags>shell bat script linuxshell macshell windowsbat</PackageTags>
+    <Version>2.0.1</Version>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageIconUrl>https://raw.githubusercontent.com/colin-chang/ShellHelper/master/logo.ico</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>

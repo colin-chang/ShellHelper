@@ -8,28 +8,22 @@ namespace ColinChang.ShellHelper.Sample
     {
         static void Main(string[] args)
         {
-            ExecuteScript();
-            ExecuteScriptFile();
-            
+//            ExecuteCommand();
+            Console.WriteLine(ExecuteScriptFile());
+
             Console.ReadKey();
         }
 
-        static void ExecuteScript()
+        static void ExecuteCommand()
         {
-            ShellHelper.Execute("dotnet", "--info");
+            ShellHelper.ExecuteCommand("dotnet", "--info");
         }
 
-        static void ExecuteScriptFile()
+        static bool ExecuteScriptFile()
         {
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-            {
-                ShellHelper.Execute("win.bat", "C:\\", true);
-            }
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ||
-                     RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-            {
-                ShellHelper.Execute("linux-mac.sh", "-lh", true);
-            }
+            return RuntimeInformation.IsOSPlatform(OSPlatform.Windows)
+                ? ShellHelper.ExecuteFile("win.bat", "C:\\", true)
+                : ShellHelper.ExecuteFile("linux-mac.sh", "-lh", true);
         }
     }
 }
