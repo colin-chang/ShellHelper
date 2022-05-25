@@ -119,13 +119,13 @@ namespace ColinChang.ShellHelper
                 if (proc == null)
                     throw new NotSupportedException($"Sorry,{shell} can not exec.");
 
-                string reuslt = null;
+                string reusult = null;
                 using (var sr = proc.StandardOutput)
                 {
                     while (!sr.EndOfStream)
                     {
-                        reuslt = sr.ReadLine();
-                        Console.WriteLine(reuslt);
+                        reusult = sr.ReadLine();
+                        Console.WriteLine(reusult);
                     }
 
                     if (!proc.HasExited)
@@ -133,7 +133,7 @@ namespace ColinChang.ShellHelper
                 }
 
                 File.Delete(newFile);
-                return Convert.ToInt32(reuslt) <= 0;
+                return Convert.ToInt32(reusult) <= 0;
             }
             catch (Exception ex)
             {
